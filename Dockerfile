@@ -1,14 +1,13 @@
-# Imagen base oficial de Tomcat 10 con JDK 21
-FROM tomcat:10.1-jdk22-openjdk
+# Tomcat 10 con JDK 21
+FROM tomcat:10.1-jdk21-openjdk
 
-# Eliminar aplicaciones por defecto (opcional)
+# Borrar apps por defecto
 RUN rm -rf /usr/local/tomcat/webapps/*
 
-# Copiar tu WAR a la carpeta webapps del Tomcat
+# Copiar tu WAR ya recompilado con JDK 21
 COPY ROOT.war /usr/local/tomcat/webapps/ROOT.war
 
-# Exponer el puerto que Render usará
+# Puerto que usa Render
 EXPOSE 8080
 
-# Ejecutar Tomcat
 CMD ["catalina.sh", "run"]
