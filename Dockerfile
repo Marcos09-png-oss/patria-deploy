@@ -1,5 +1,5 @@
-# Imagen base oficial de Tomcat
-FROM tomcat:9.0-jdk11-openjdk
+# Imagen base oficial de Tomcat 10 con JDK 17
+FROM tomcat:10.1-jdk17-openjdk
 
 # Eliminar apps por defecto (opcional)
 RUN rm -rf /usr/local/tomcat/webapps/*
