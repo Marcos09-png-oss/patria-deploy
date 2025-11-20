@@ -1,5 +1,5 @@
 # Imagen base oficial de Tomcat 10 con JDK 21
-FROM tomcat:10.1-jdk21-openjdk
+FROM tomcat:10.1-jdk22-openjdk
 
 # Eliminar aplicaciones por defecto (opcional)
 RUN rm -rf /usr/local/tomcat/webapps/*
